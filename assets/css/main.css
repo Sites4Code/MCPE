@@ -1224,9 +1224,10 @@
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
+			min-width: 87px;
+    			min-height: 87px;
+			max-width: 87px;
+    			max-height: 87px;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
@@ -1374,9 +1375,10 @@
 				}
 
 			#header .logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
+			min-width: 87px;
+    			min-height: 87px;
+			max-width: 87px;
+    			max-height: 87px;
 			}
 
 				#header .logo .icon:before {
