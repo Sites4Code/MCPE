@@ -79,11 +79,18 @@ permissions:
 
 						<!-- Volume 1 -->
 							<article id="Vol1">
-								<h2 class="major">Work</h2>
+								<h2 class="major">Volume 1: Basics and Concepts</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+								<p>In this first Volume, you will learn all of the items of code that are required in order for the plugin to work. You will also find the most basic functions that are optional, but they add a nice finishing (or starting, in this case) touch to the plugin!</p>
+								<h3>First Steps</h3>
+								<pre><code>&lt;?php//All PHP Files must start with this.
+								namespace Inactive-to-Reactive; //This should be the subfolder of the src directory. Based off of the folder structure example in the "intro" section, this is Inactive-to-Reactive
+								#next, we add the "use" statements. Note, more use statements will be added as we progress through the lessons
+								use pocketmine\plugin\PluginBase;
+								#Then, we type the class
+								class Inactive-to-ReactiveExample extends PluginBase{ //This has a specific format: class (The File Name) extends PluginBase{ The "PluginBase" part differs based on which file it is, but that is very advanced. You will find out more another time.
+								</code></pre>
+						</article>
 
 						<!-- Volume 2 -->
 							<article id="Vol2">
