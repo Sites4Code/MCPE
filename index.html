@@ -123,7 +123,7 @@ Public function onEnable is when your plugin Enables on the Logger or as we all 
 <br><br>
 Public function on Disable is when your plugin disables on the Logger or as we also know the CONSOLE. The plugin sends a message to the console on Disable!
 <br><br>
-You have learned the 3 BASIC Functions! Congratulations!
+You have learned the 3 BASIC Functions! Congratulations! <br><br><br>
 								<h3>Player Events!</h3>
 								You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
 
@@ -171,7 +171,44 @@ Now the Color of your message will be Green!
 
 NOTE: Instead of using getPlayer() in PlayerDeathEvent, make sure you use getEntity() or it will crash your server for everytime someone dies.
 
-A LIST of PLAYER events could be found here: <a href="https://github.com/ImagicalCorp/ImagicalMine/tree/master/src/pocketmine/event/player">ClickMeBro</a>
+A LIST of PLAYER events could be found here: <a href="https://github.com/pmmp/PocketMine-MP/tree/master/src/pocketmine/event/player">ClickMeBro</a>
+								<h3> So, we have finally reached the end of the first volume! Let's take a look at what we have! (Spoiler: It's a lot).</h3>
+<pre><code>&lt;?php
+
+namespace Inactive-to-Reactive;
+
+use pocketmine\plugin\PluginBase;
+
+use pocketmine\event\player\PlayerJoinEvent;
+
+use pocketmine\event\player\PlayerQuitEvent;
+
+use pocketmine\Player;
+
+use pocketmine\Server;
+
+use pocketmine\event\Listener;
+
+use pocketmine\utils\TextFormat as C;
+
+class Inactive-to-ReactiveExample extends PluginBase implements Listener{
+
+          public function onLoad(){
+                    $this->getLogger()->info("Plugin Loading");
+          }
+          public function onEnable(){
+                    $this->getServer()->getPluginManager()->registerEvents($this,$this);
+		    $this->getLogger()->info("Enabled Plugin");
+          }
+          public function onDisable(){
+                    $this->getLogger()->info("Plugin Disabled");
+          }
+	  public function onJoin(PlayerJoinEvent $event){
+  		 $player = $event->getPlayer();
+   		$name = $player->getName();
+   		$this->getServer()->broadcastMessage(C::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");
+	}
+}</code></pre>
 						</article>
 
 						<!-- Volume 2 -->
