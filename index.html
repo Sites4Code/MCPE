@@ -93,23 +93,20 @@ class Inactive-to-ReactiveExample extends PluginBase{ //This has a specific form
 								</code></pre>
 						<h3>Enable, Disable, and Load functions!</h3>
 								After the class statement press ENTER key and type
-<pre><code>
-public function onLoad(){</code></pre>
+<pre><code>public function onLoad(){</code></pre>
 <blockquote>If you want a Load Message!</blockquote>
 Press ENTER after the function line and type:
-<pre><code>
-$this->getLogger()->info("Plugin Loading");</code></pre>
+<pre><code>$this->getLogger()->info("Plugin Loading");</code></pre>
 You just created a public function and created a load message!
 
 <blockquote>Here is the layout so far including all public function im going to mention in this lesson:</blockquote>
-<pre><code>
-<?php
+<pre><code>&lt;?php
 
-namespace Taki21\Plugin;
+namespace Inactive-to-Reactive;
 
 use pocketmine\plugin\PluginBase;
 
-class Main extends PluginBase{
+class Inactive-to-ReactiveExample extends PluginBase{
 
           public function onLoad(){
                     $this->getLogger()->info("Plugin Loading");
@@ -120,8 +117,7 @@ class Main extends PluginBase{
           public function onDisable(){
                     $this->getLogger()->info("Plugin Disabled");
           }
-}
-</code></pre>
+}</code></pre>
 
 Public function onEnable is when your plugin Enables on the Logger or as we all know the CONSOLE. The plugin sends a message to the console on Enable!
 
