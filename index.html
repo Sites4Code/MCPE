@@ -99,7 +99,7 @@ Press ENTER after the function line and type:
 <pre><code>$this->getLogger()->info("Plugin Loading");</code></pre>
 You just created a public function and created a load message!
 
-<blockquote>Here is the layout so far including all public function im going to mention in this lesson:</blockquote>
+<blockquote>Here is the layout so far, and I hope common sense allows you to understand onEnable and onDisable even though we didn't give you a step by step for them:</blockquote>
 <pre><code>&lt;?php
 
 namespace Inactive-to-Reactive;
@@ -124,6 +124,54 @@ Public function onEnable is when your plugin Enables on the Logger or as we all 
 Public function on Disable is when your plugin disables on the Logger or as we also know the CONSOLE. The plugin sends a message to the console on Disable!
 <br><br>
 You have learned the 3 BASIC Functions! Congratulations!
+								<h3>Player Events!</h3>
+								You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
+
+<blockquote>To apply this in your plugin import these USE Statements! Remember "use" statements? import the following:</blockquote>
+<pre><code>// Event when Player Joins
+use pocketmine\event\player\PlayerJoinEvent;
+
+// Event When Player Quits
+use pocketmine\event\player\PlayerQuitEvent;
+
+// Player "class"
+use pocketmine\Player;
+
+// Server "class"
+use pocketmine\Server;
+
+// Event Listener
+use pocketmine\event\Listener;</code></pre>
+
+<blockquote>Since we are using events now, we change the class staement a bit:</blockquote>
+<pre><code>class Main extends PluginBase implements Listener{</code></pre>
+
+<blockquote>For the onEnable() function we add this line right after public function onEnable() (Since we are USING EVENTS!!!)</blockquote>
+<pre><code>public function onEnable(){
+     $this->getServer()->getPluginManager()->registerEvents($this,$this); // THIS LINE
+     $this->getLogger()->info("Plugin Enabled");</code></pre>
+
+<blockquote>Do you want to broadcast a message on the server saying someone joined in a FANCY way? Then we are going to use another function!!! Here:</blockquote>
+<pre><code>public function onJoin(PlayerJoinEvent $event){
+   $player = $event->getPlayer();
+   $name = $player->getName();
+   $this->getServer()->broadcastMessage("$name Joined The Inactive-to-Reactive test Server! Awesome!");
+   </code></pre>
+Did you know: getPlayer() and getName() are public functions? This is how NEW Functions are made! "onJoin" is a new public function! People who know JavaScript may know this!
+
+<blockquote>Congratulations on getting a Join message, but do you want it in COLOR? Import this "use" statement to your code:</blockquote>
+<pre><code>// Text Format formats text and changes Color
+
+use pocketmine\utils\TextFormat;</code></pre>
+
+								<blockquote>Now for your message:</blockquote>
+<pre><code>$this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");</code></pre>
+
+Now the Color of your message will be Green!
+
+NOTE: Instead of using getPlayer() in PlayerDeathEvent, make sure you use getEntity() or it will crash your server for everytime someone dies.
+
+A LIST of PLAYER events could be found here: <a href="https://github.com/ImagicalCorp/ImagicalMine/tree/master/src/pocketmine/event/player">ClickMeBro</a>
 						</article>
 
 						<!-- Volume 2 -->
