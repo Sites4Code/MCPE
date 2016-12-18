@@ -1,0 +1,39 @@
+<!-- Instroduction page -->
+
+
+
+<span>
+<h2 class="major">
+    Introduction</h2>
+<p>Welcome to the new and redesigned "Learn How To Code" website! Our goal is to teach you how to code plugins for PocketMine-MP and other spoons, so that you can contribute to the large community by submitting your own plugins/addons!</p>
+<p>Credits go to @TheKnightGamer for publicizing and sharing the website, to @remote_vase for creating the website and adding a little to the tutorials, and to @Taki21 for creating the tutorials and posting them on ImagicalMine Community forums.
+</p>
+<h3>Sample plugin.yml</h3>
+<pre><code>name: PluginName
+author: CoderName
+api: [1.14.0, 2.0.0]
+version: 1.0
+main: Inactive-to-Reactive/Inactive-to-ReactiveExample.php 
+# For "main" statement above, find the main class path, but exclude "src"
+
+# Commands: If ur plugin has commands: Do this:
+command:
+	cmdname:
+		description: cmdnameDescription
+		usage: /cmdname
+	cmd2name:
+		description: cmd2nameDescription
+		usage: /cmd2name
+
+# Permissions 
+permissions:
+	cmdname.command:
+		default: true
+	cmd2name.command:
+		default: true</code></pre>
+<blockquote>Do not forget to substitute your plugin information (name, author, main path, commands, and permissions).</blockquote>
+<h3>Sample file structure</h3>
+<pre><span></span>PluginName ├── plugin.yml └── src └── Inactive-to-Reactive └── Inactive-to-ReactiveExample.php
+</pre>
+<blockquote>Do not forget to change "Inactive-to-Reactive" to your name (because YOU are the author, not us)!</blockquote>
+</span>
