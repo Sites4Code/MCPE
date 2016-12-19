@@ -1,30 +1,53 @@
 <!-- Volume 3 -->
 
 <span>
-                <h2 class="major">Contact</h2>
-                <form method="post" action="#">
-                    <div class="field half first">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" />
-                    </div>
-                    <div class="field half">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" />
-                    </div>
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="4"></textarea>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="special" /></li>
-                        <li><input type="reset" value="Reset" /></li>
-                    </ul>
-                </form>
-                <ul class="icons">
-                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a>
-</li>
-<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-</ul>
+    <h2>Config files !</h2>
+    <hr>
+    Config files can make your plugin one of the most customisablest in the world !<br>
+    But to use a config file, we need multiple things:<br>
+    - A default config file, saved on a resource folder (1)<br>
+    - Saving the config so the user can edit it (2)<br>
+    - Taking data from the config (3)<br>
+    - Setting data to the config (4)<br><br><br><br>
+    
+
+    1) Creating a default config:<br>
+    Go to your root plugin folder and create a folder called "resources".<br>
+    Inside of it, create a file "config.yml" and put the default config you want to display to the user.<br>
+    Yaml works like array:<br>
+    <pre><code>
+key: value
+        </code></pre>
+<br><br><br>
+        2) Saving the config when the plugins enables
+    After you succefully made your config, go to your main file and add to your onEnable function:
+    <pre><code>
+$this->saveDefaultConfig(); // Saves config.yml if not created.
+$this->reloadConfig(); // Fix bugs sometimes by getting configs values
+        </code></pre>
+        <br><br><br>
+    3) Taking data from the config<br>
+    If you wanna get the data from your config, add this line:
+    <pre><code>
+$keyFromConfig = $this->getConfig()->get("key"); // This will return the element "key" from the config.
+    </code></pre>
+    Its also a good practive to reload your config before to be sure to get the last user choice.
+    <pre><code>
+$this->reloadConfig();
+    </code></pre>
+    <br><br>
+    4) Setting data to the config.<br>
+    Setting data to the config helps you to save data for games, or to correct wrong values inputed by the user.<br>
+    To set data to the config, add this line to your code when you want to set the data to the config.<br>
+    <pre><code>
+$this->getConfig()->set("key", "example"); // This will set the element "key" of the config.to example.
+    </code></pre>
+    But remember that you need to save the config to apply changes in the file.
+    <pre><code>
+$this->getConfig()->save(); // Saves the config
+    </code></pre>
+
+
+    <!-- TODO: CustomConfig -->
+
 </span>
