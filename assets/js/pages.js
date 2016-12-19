@@ -2,21 +2,22 @@
 Page downloader & switcher to make code cleaner.
 By (c) Ad5001 2016
 */
-
+num = 0;
 articles = document.getElementsByTagName("article");
 console.log(articles);
 /*l = location.pathname.split("/");
 l[l.length - 1] = undefined;
 dir = l.join("/");*/
-for (i = 0; i < articles.length; i++) {
+for (i = 0; i < articles.length; i = i) {
     console.log("pages/" + articles[i].id + ".html");
     $.get("pages/" + articles[i].id + ".html", function(responseText) {
         setPage(responseText);
+        i++
     });
 }
 
 
 function setPage(text) {
-    page = text.split("-->")[0].substr(5); // Temporary working solution
-    document.getElementsById(page).innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
+    document.getElementsByTagName("article")[0].innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
+    num++;
 }
