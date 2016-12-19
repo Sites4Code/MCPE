@@ -11,11 +11,10 @@ for (i = 0; i < articles.length; i = i) {
     console.log("pages/" + articles[i].id + ".html");
     $.get("pages/" + articles[i].id + ".html", function(responseText) {
         setPage(responseText);
-        i++
     });
 }
 
 
 function setPage(text) {
-    document.getElementsByTagName("article")[i].innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
+    document.getElementsByTagName("article")[i++].innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
 }
