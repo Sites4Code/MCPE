@@ -1,0 +1,50 @@
+<!-- Volume 4 -->
+
+<span>
+         <h2 class="major">Tasks</h2>
+         <h3>Creating a simple plugin task</h3>
+         We'll take our last plugin and adding a simple task to it that tells the user when 10 seconds has past.<br>
+         First, go to your "Inactive-to-ReactiveExample.php" folder and create a new folder called "tasks".<br>
+         Create a new file called "MyTask.php".<br>
+         And put those contents inside of it.<br>
+         <pre><code>
+             &lt?php // As always when you start a PHP file
+
+             namespace Inactive-to-Reactive\tasks; // Use the same namespace as in your first file but add a \tasks who symbolise that this file is in the subfolder "tasks"
+
+             use pocketmine\scheduler\PluginTask; // This is the class that your task will extends to be a plugin task
+             use Inactive-to-Reactive\Inactive-to-ReactiveExample; // This will allow us to use our main class. It is a required argument for a plugin task.
+             
+             class MyTask extends PluginTask { // Remember that your task must have the same name as your file !
+
+                // First we need a __construct function which is used when you create a class to set default variables, ect...
+                public function __construct(Inactive-to-ReactiveExample $main, string $playername) { // The arguments you define here depends on what do you want to do exept for your base.
+                    parent::__construct($main); // Used to meet pocketmine requirements for the tasks. You can retrieve your main class at anytime and use it's methods on your class by using $this->getOwner()
+                    $this->playername = $playername; // So we can retreive the player for later.
+                }
+
+
+                // Then we'll create an onRun funtion wich will be called when the time has past to the execution of the task
+                public function onRun($tick) { // $tick is the current server tick when the task executes
+                    $player = $this->getOwner()->getServer()->getPlayer($this->playername()); // This retreive the main class with $this->getOwner() then asks the server for the player with the name $this->playername
+                    if($player instanceof Player) { // Basicly checks if the player we retreive is online.
+                        $player->sendMessage("10 seconds has past!"); // Sends him a message !
+                    }
+                }
+             }.
+             </code></pre>
+             That's it you created a task ! Now we'll see how to execute it.<br>
+             First we will make it execute 1 time, but delayed<br>
+             In your main class, where you did your "test" command.
+             <pre><code>
+                 $task = new tasks\MyTask($this, $sender->getName()); // Create the new class Task by calling
+                 $this->getServer()->getScheduler()->scheduleDelayedTask($task, 10*20); // Counted in ticks (1 second = 20 ticks)
+                 </code></pre>
+                 So the player will receive a message 10 seconds after he executed the command /test !<br>
+                 But now, what if we want the player to receive a message <b>each</b> 10 seconds?<br>
+                 Well, there's a special function for that ! We don't even need to change the task !<br>
+             <pre><code>
+                 $task = new tasks\MyTask($this, $sender->getName()); // Create the new class Task by calling
+                 $this->getServer()->getScheduler()->scheduleRepeatingTask($task, 10*20); // Counted in ticks (1 second = 20 ticks)
+                 </code></pre>
+</span>

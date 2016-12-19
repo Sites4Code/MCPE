@@ -1,587 +1,99 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>HowToCode</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+    <title>HowToCode</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <a href="#hidden" style="text-decoration:none;"><img src="https://avatars1.githubusercontent.com/u/19750661?v=3&s=86"></a>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Plugin School</h1>
+                    <p><b>Learn how to code. <br> <br> Website credit goes to @remote_vase & @Ad5001. <br> All original lessons were created by @Taki21 with some helpful additions by Inactive-to-Reactive. New lessons such as "Tasks" are added by Inactive-To-Reactive members (such as @Ad5001 and @remote_vase)<br> <br> Suggest edits <a href=" https://github.com/Inactive-to-Reactive/PluginSchoolV2/issues"> Here</a>.</b></p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#Vol1">Basics and Concepts</a></li>
+                    <li><a href="#Vol2">Commands</a></li>
+                    <li><a href="#Vol3">Config Files</a></li>
+                    <li><a href="#Vol4">Tasks</a></li>
+                    <li><a href="#Vol5">General PHP Knowledge</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <article id="intro">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Volume 1 -->
+            <article id="Vol1">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Volume 2 -->
+            <article id="Vol2">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Volume 3 -->
+            <article id="Vol3">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Volume 4 -->
+            <article id="Vol4">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Volume 5 -->
+            <article id="Vol4">
+                <p>Loading page from server...</p>
+            </article>
+
+            <!-- Hidden -->
+            <article id="hidden">
+                <!-- Did this one or people would have a lag and an error in the console :p -->
+            </article>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Inactive-To-Reactive Website Team</p>
+        </footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/pages.js"></script>
+
+</body>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<a href="#hidden" style="text-decoration:none;"><img src="https://avatars1.githubusercontent.com/u/19750661?v=3&s=86"></a>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Plugin School</h1>
-							<p><b>Learn how to code. <br> <br> Website credit goes to @remote_vase. <br> All original lessons were created by @Taki21 with some helpful additions by Inactive-to-Reactive. <br> <br> Suggest edits <a href=" https://github.com/Inactive-to-Reactive/PluginSchoolV2/issues"> Here</a>.</b></p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Introduction</a></li>
-								<li><a href="#Vol1">Basics and Concepts</a></li>
-								<li><a href="#Vol2">Commands</a></li>
-								<li><a href="#Vol3">Config Files</a></li>
-								<li><a href="#Vol4">General PHP Knowledge</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Introduction</h2>
-								<p>Welcome to the new and redesigned "Learn How To Code" website! Our goal is to teach you how to code plugins for PocketMine-MP and other spoons, so that you can contribute to the large community by submitting your own plugins/addons!</p>
-								<p>Credits go to @TheKnightGamer for publicizing and sharing the website, to @remote_vase for creating the website and adding a little to the tutorials, and to @Taki21 for creating the tutorials and posting them on ImagicalMine Community forums.</p>
-								<h3>Sample plugin.yml</h3>
-								<pre><code>name: PluginName
-author: CoderName
-api: [1.14.0, 2.0.0]
-version: 1.0
-main: Inactive-to-Reactive/Inactive-to-ReactiveExample.php 
-# For "main" statement above, find the main class path, but exclude "src"
-
-# Commands: If ur plugin has commands: Do this:
-command:
-	cmdname:
-		description: cmdnameDescription
-		usage: /cmdname
-	cmd2name:
-		description: cmd2nameDescription
-		usage: /cmd2name
-
-# Permissions 
-permissions:
-	cmdname.command:
-		default: true
-	cmd2name.command:
-		default: true</code></pre>
-							<blockquote>Do not forget to substitute your plugin information (name, author, main path, commands, and permissions).</blockquote>
-							<h3>Sample file structure</h3>
-								<pre><span></span>PluginName
-        ├── plugin.yml
-        └── src
-            └── Inactive-to-Reactive
-                └── Inactive-to-ReactiveExample.php
-</pre> <blockquote>Do not forget to change "Inactive-to-Reactive" to your name (because YOU are the author, not us)!</blockquote>
-						</article>
-
-						<!-- Volume 1 -->
-							<article id="Vol1">
-								<h2 class="major">Volume 1: Basics and Concepts</h2>
-								<p>In this first Volume, you will learn all of the items of code that are required in order for the plugin to work. You will also find the most basic functions that are optional, but they add a nice finishing (or starting, in this case) touch to the plugin!</p>
-								<h3>First Steps</h3>
-								<pre><code>&lt;?php//All PHP Files must start with this.
-
-namespace Inactive-to-Reactive; //This should be the subfolder of the src directory. Based off of the folder structure example in the "intro" section, this is Inactive-to-Reactive
-
-#next, we add the "use" statements. Note, more use statements will be added as we progress through the lessons
-use pocketmine\plugin\PluginBase;
-
-#Then, we type the class statement:
-class Inactive-to-ReactiveExample extends PluginBase{ //This has a specific format: class (The File Name) extends PluginBase{ The "PluginBase" part differs based on which file it is, but that is very advanced. You will find out more another time.
-								</code></pre>
-						<h3>Enable, Disable, and Load functions!</h3>
-								After the class statement press ENTER key and type
-<pre><code>public function onLoad(){</code></pre>
-<blockquote>If you want a Load Message!</blockquote>
-Press ENTER after the function line and type:
-<pre><code>$this->getLogger()->info("Plugin Loading");</code></pre>
-You just created a public function and created a load message!
-
-<blockquote>Here is the layout so far, and I hope common sense allows you to understand onEnable and onDisable even though we didn't give you a step by step for them:</blockquote>
-<pre><code>&lt;?php
-
-namespace Inactive-to-Reactive;
-
-use pocketmine\plugin\PluginBase;
-
-class Inactive-to-ReactiveExample extends PluginBase{
-
-          public function onLoad(){
-                    $this->getLogger()->info("Plugin Loading");
-          }
-          public function onEnable(){
-                    $this->getLogger()->info("Enabled Plugin");
-          }
-          public function onDisable(){
-                    $this->getLogger()->info("Plugin Disabled");
-          }
-}</code></pre>
-
-Public function onEnable is when your plugin Enables on the Logger or as we all know the CONSOLE. The plugin sends a message to the console on Enable!
-<br><br>
-Public function on Disable is when your plugin disables on the Logger or as we also know the CONSOLE. The plugin sends a message to the console on Disable!
-<br><br>
-You have learned the 3 BASIC Functions! Congratulations! <br><br><br>
-								<h3>Player Events!</h3>
-								You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
-
-<blockquote>To apply this in your plugin import these USE Statements! Remember "use" statements? import the following:</blockquote>
-<pre><code>// Event when Player Joins
-use pocketmine\event\player\PlayerJoinEvent;
-
-// Event When Player Quits
-use pocketmine\event\player\PlayerQuitEvent;
-
-// Player "class"
-use pocketmine\Player;
-
-// Server "class"
-use pocketmine\Server;
-
-// Event Listener
-use pocketmine\event\Listener;</code></pre>
-
-<blockquote>Since we are using events now, we change the class statement a bit:</blockquote>
-<pre><code>class Inactive-to-ReactiveExample extends PluginBase implements Listener{</code></pre>
-
-<blockquote>For the onEnable() function we add this line right after public function onEnable() (Since we are USING EVENTS!!!)</blockquote>
-<pre><code>public function onEnable(){
-     $this->getServer()->getPluginManager()->registerEvents($this,$this); // THIS LINE
-     $this->getLogger()->info("Plugin Enabled");</code></pre>
-
-<blockquote>Do you want to broadcast a message on the server saying someone joined in a FANCY way? Then we are going to use another function!!! Here:</blockquote>
-<pre><code>public function onJoin(PlayerJoinEvent $event){
-   $player = $event->getPlayer();
-   $name = $player->getName();
-   $this->getServer()->broadcastMessage("$name Joined The Inactive-to-Reactive test Server! Awesome!");
-   </code></pre>
-Did you know: getPlayer() and getName() are public functions? This is how NEW Functions are made! "onJoin" is a new public function! People who know JavaScript may know this!
-
-<blockquote>Congratulations on getting a Join message, but do you want it in COLOR? Import this "use" statement to your code:</blockquote>
-<pre><code>// Text Format formats text and changes Color
-
-use pocketmine\utils\TextFormat;</code></pre>
-
-								<blockquote>Now for your message:</blockquote>
-<pre><code>$this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");</code></pre>
-
-Now the Color of your message will be Green!
-
-NOTE: Instead of using getPlayer() in PlayerDeathEvent, make sure you use getEntity() or it will crash your server for everytime someone dies.
-
-A LIST of PLAYER events could be found here: <a href="https://github.com/pmmp/PocketMine-MP/tree/master/src/pocketmine/event/player">ClickMeBro</a>
-								<br><Br><br><h3> So, we have finally reached the end of the first volume! Let's take a look at what we have! (Spoiler: It's a lot).</h3>
-<pre><code>&lt;?php
-
-namespace Inactive-to-Reactive;
-
-use pocketmine\plugin\PluginBase;
-
-use pocketmine\event\player\PlayerJoinEvent;
-
-use pocketmine\event\player\PlayerQuitEvent;
-
-use pocketmine\Player;
-
-use pocketmine\Server;
-
-use pocketmine\event\Listener;
-
-use pocketmine\utils\TextFormat as C;
-
-class Inactive-to-ReactiveExample extends PluginBase implements Listener{
-
-          public function onLoad(){
-                    $this->getLogger()->info("Plugin Loading");
-          }
-          public function onEnable(){
-                    $this->getServer()->getPluginManager()->registerEvents($this,$this);
-		    $this->getLogger()->info("Enabled Plugin");
-          }
-          public function onDisable(){
-                    $this->getLogger()->info("Plugin Disabled");
-          }
-	  public function onJoin(PlayerJoinEvent $event){
-  		 $player = $event->getPlayer();
-   		$name = $player->getName();
-   		$this->getServer()->broadcastMessage(C::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");
-	}
-}</code></pre>
-						</article>
-
-						<!-- Volume 2 -->
-							<article id="Vol2">
-								<h2 class="major">Volume 2: Commands</h2>
-								<h3>Setting up a command</h3>
-Using commands in a plugin enchants your Plugin! Commands can automatically and easily do things for you! 
-<blockquote>Insert these "use" statements if you are using commands:</blockquote>
-<pre><code>// Command
-use pocketmine\command\Command;
-
-// Person who does command
-use pocketmine\command\CommandSender;</code></pre>
-<blockquote>To setup the command we use a public function! Layout:</blockquote>
-<pre><code>public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
-}</code></pre>
-It may be long for a function, but thats how you're gonna make commands!
-<blockquote>After Public Function onCommand():</blockquote>
-
-<pre><code>if($cmd->getName() == "test"){ //In this case, we will make the command "/test"
-     $sender->sendMessage("This is a Test");</code></pre>
-Explanation: In the scenario above, if the command "/test" is issued, the server will send a message to the player who executed this Command!
-Congratulations on your first "if" statement! These are very important in PHP!<br><BR>
-<blockquote>PREVIEW: Lets see what we got so far...</blockquote>
-<pre><code>&lt;?php
-
-namespace Inactive-to-Reactive;
-
-use pocketmine\plugin\PluginBase;
-use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\utils\TextFormat;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-
-class Inactive-to-ReactiveExample extends PluginBase implements Listener{
-     public function onEnable(){
-          $this->getServer()->getPluginManager()->registerEvents($this,$this);
-          $this->getLogger()->info("Plugin Enabled");
-     }
-     public function onJoin(PlayerJoinEvent $event){
-          $player = $event->getPlayer();
-          $name = $player->getName();
-          $this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");
-     }
-     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
-          if($cmd->getName() == "test"){
-               $sender->sendMessage("This Is A Test!");
-          }
-          return true;
-     }
-}</code></pre>
-The "return true" statement goes AFTER the if brackets "{" and "}"
-So when some one does /test they get a message "This is a test!" <br> Is this too boring for you? Wanna make it EVEN BETTER?
-
-<blockquote>This is how you can make the command "/test" a LOT better! Now, when the player issues a command, he/she will recieve 4 steak!</blockquote>
-<pre><code>if($cmd->getName() == "test"){
-     $sender->getInventory()->addItem(Item::get(364,0,2)); //364 = Item ID Value (in this case, 364 is steak)
-     $sender->sendMessage(TextFormat::BOLD."You have just recieved 4 steak!");
-}
-return true;</code></pre>
-
-This command lets you get four steaks! This shows you almost how powerful commands can be, but there is a LOT more! Unfortunately,
-something is not right! What would happen if the CONSOLE was the command sender? How do we prevent the Console?
-<br><br>
-<blockquote>To prevent the situation above we are going to use an if statement including "instanceof" </blockquote>
-
-<pre><code>if($cmd->getName() == "test"){
-     if(!$sender instanceof Player){ // Basically this checks if the Command Sender is NOT a player
-          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!"); // For Console Command Sender
-     }else{ //if command sender is not a CONSOLE
-          $sender->getInventory()->addItem(Item::get(364,0,4));
-          $sender->sendMessage("You have just recieved 4 steak!");
-     }
-}
-return true;</code></pre>
-
-This handy dandy chunk of code will make sure that your server does not crash when it tries to give the console 4 steak (which it can no longer do).
-								</article>
-
-						<!-- Volume 3 -->
-							<article id="Vol3">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Volume 4 -->
-							<article id="Vol4">
-								<h2 class="major">Elements</h2>
-
-							</article>
-						<!-- Hidden -->
-							<article id="hidden">
-								<h2 class="major">Hidden Elements-You found a cookie! (A boring one, let me warn you)</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="demo-name">Name</label>
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-										</div>
-										<div class="field half">
-											<label for="demo-email">Email</label>
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-										</div>
-										<div class="field">
-											<label for="demo-category">Category</label>
-											<div class="select-wrapper">
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="field half first">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<div class="field half first">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
-										</div>
-										<div class="field half">
-											<input type="checkbox" id="demo-human" name="demo-human" checked>
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="field">
-											<label for="demo-message">Message</label>
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Inactive-To-Reactive Website Team</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
