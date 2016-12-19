@@ -12,7 +12,7 @@ while (i < articles.length) {
     console.log("pages/" + articles[i].id + ".html");
     $.get("pages/" + articles[i].id + ".html", function(responseText) {
         setPage(responseText);
-        console.log("pages/" + articles[i].id + ".html");
+        console.log(articles[i]);
     });
 }
 
