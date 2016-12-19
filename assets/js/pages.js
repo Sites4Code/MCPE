@@ -17,10 +17,6 @@ while (i < articles.length) {
         },
         async: false
     });
-    $.get("pages/" + articles[i].id + ".html", function(responseText) {
-        setPage(responseText);
-        console.log(articles[i]);
-    });
 }
 
 
