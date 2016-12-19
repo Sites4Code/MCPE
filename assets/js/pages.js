@@ -10,12 +10,8 @@ l[l.length - 1] = undefined;
 dir = l.join("/");*/
 while (i < articles.length) {
     console.log("pages/" + articles[i].id + ".html");
-    jQuery.ajax({
-        url: "pages/" + articles[i].id + ".html",
-        success: function(result) {
-            setPage(result.message);
-        },
-        async: false
+    $.get("pages/" + articles[i].id + ".html", function(responseText) {
+        setPage(responseText);
     });
 }
 
