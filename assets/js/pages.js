@@ -3,7 +3,6 @@ Page downloader & switcher to make code cleaner.
 By (c) Ad5001 2016
 */
 
-num = 0;
 articles = document.getElementsByTagName("article");
 console.log(articles);
 /*l = location.pathname.split("/");
@@ -18,6 +17,6 @@ for (i = 0; i < articles.length; i++) {
 
 
 function setPage(text) {
-    document.getElementsByTagName("article")[num].innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
-    num++;
+    page = text.split("-->")[0].substr(5); // Temporary working solution
+    document.getElementsById(page).innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
 }
