@@ -28,7 +28,7 @@ By (c) Ad5001 2016
         QandA = [{
                 question: "Where should you put your main file?",
                 a: "In the src folder",
-                b: "In te src/<Your_Username> folder",
+                b: "In te src/Your_Username folder",
                 c: "In your resources folder",
                 valid: "2"
             },
@@ -74,8 +74,10 @@ By (c) Ad5001 2016
 
 function quizValidate(num) {
     if (typeof QandA[quizStep + 1] == "undefined") {
-        alert("Your score is : " + score + " / " + quizStep);
-        quizStep = 0;
+        alert("Your score is : " + (score / quizStep * 100) + "%");
+        quizStep = -1;
+        nextQuestion();
+        score = 0;
         location.hash = "#";
         return;
     }
@@ -87,7 +89,7 @@ function quizValidate(num) {
     }
     setTimeout(function() {
         nextQuestion();
-        answers[num - 1].style.backgroundColor = "gray";
+        answers[num - 1].style.backgroundColor = "lightgray";
     }, 2000);
 }
 
