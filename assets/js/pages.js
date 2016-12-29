@@ -27,10 +27,10 @@ By (c) Ad5001 2016
 
         QandA = [{
                 question: "Where should you put your main file?",
-                a: "In the src folder",
-                b: "In te src/Your_Username folder",
+                a: "In the src folder OR src/Your_Username folder",
+                b: "In the Your_USERNAME/SRC folder",
                 c: "In your resources folder",
-                valid: "2"
+                valid: "1"
             },
             {
                 question: "How to log a message on the console?",
@@ -55,9 +55,9 @@ By (c) Ad5001 2016
             },
             {
                 question: "How much is a tick?",
-                a: "1 tick = 20 seconds",
-                b: "1 tick = 1/20 seconds",
-                c: "1 tick = 20 seconds",
+                a: "20 ticks = 1/20 of a second",
+                b: "20 ticks = 1 second",
+                c: "20 ticks = 20 seconds",
                 valid: "2"
             },
         ]
