@@ -1,0 +1,23 @@
+<!-- Vol4 -->
+
+<span>
+	<h2>PocketMine error parser.</h2>
+	<h3>Paste your pocketmine errors in you don't uunderstand in the input below (DO NOT PASTE THE LOGGER !)</h3>
+	<input type="text" id="input_error" placeholder="Paste here." />
+	<p id="output_error"></p>
+	<script>
+	document.getElementById("#input_error").addEventListener("change", change);
+	document.getElementById("#input_error").addEventListener("onchange", change);
+	change = function(event) {
+		txt = document.getElementById("#input_error").value;
+		document.getElementById("#input_error").value = ""; // Deleting value so the user can instantly replace it.
+		document.getElementById("#output_error").innerHTML = "Error: " + txt; // Outputing the error.
+		errors = {
+			0: [/error/ig, "Text explainning using groups"] // TODO: Add error RegExp
+		}
+		for(i = 0; i < errors.length; i++) {
+			document.getElementById("#output_error").innerHTML += "<br>" + txt.replace();
+		}
+	}
+	</script>
+</span>
