@@ -70,6 +70,59 @@ the Console?
           $sender->sendMessage("You have just recieved 4 steak!");
      }
 }
-return true;</code></pre> This handy dandy chunk of code will make sure that your server does not crash when it tries to give the console 4 steak (which it can no longer do).
+return true;</code></pre> 
+    <br>This handy dandy chunk of code will make sure that your server does not crash when it tries to give the console 4 steak (which it can no longer do).
+    <h3>Wanna know EVEN more? Arguments.</h3>
+    Great ! Now that we know how to do "basic" commands, let's make the command <i>even better</i> by allowing the user to choose how many steaks he wants !<br>
+    We'll take a look at a variable that we added without knowing what it was... I talk about the <code>$args</code> variable!<br>
+    It basicly stores every single arguments you use in an array.<br>
+    But how is it stored? Like this: <pre><code>/command &lt;$args[0]&gt; &lt;$args[1]&gt; &lt;$args[2]&gt; &lt;$args[3]&gt; ...</code></pre>
+    Warning: Arrays always starts from 0 !<br>
+    Let's apply this to our code:<br>
+    
+    <pre><code>if($cmd->getName() == "test"){
+     if(!$sender instanceof Player){
+          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
+     }else{
+          $sender->getInventory()->addItem(Item::get(364,0,$args[0])); // We choose the first argument as the count !
+          $sender->sendMessage("You have just recieved $args[0] steak!");
+     }
+}
+return true;</code></pre> 
+    As you can see, now we can use the /test &lt;steaks number&gt; and it will give us the number of steaks we want!<br>
+    But wait, what if the user doesn't enter the argument? The command won't work !<br>
+    To solve that issue, we need to add a parser to check if no argument "0" was entered, and if that's the case, "creating" it.<br>
+    We'll use function <a href="http://php.net/manual/en/function.isset.php"><code>isset</code></a> which allows us to check if a variable is defined.<br>
+    Let's what this give use in our code !<br>
+    
+    <pre><code>if($cmd->getName() == "test"){
+     if(!$sender instanceof Player){
+          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
+     }else{
+          if(!isset($args[0])) { // Check if argument 0 isn't defined.
+                $args[0] = 4; // Defining $args[0] with value 4
+          }
+          $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
+          $sender->sendMessage("You have just recieved $args[0] steak!");
+     }
+}
+return true;</code></pre> 
+    Seems already better !<br>
+    But what if the user don't enter a number? And even if it's a number, what if it's negative?<br>
+    We also need to check this in our code! We will use a new function <a href="http://php.net/manual/en/function.is-int.php"><code>is_int</code></a> which will allow us to check if a variable is an integer.<br>
+    
+    <pre><code>if($cmd->getName() == "test"){
+     if(!$sender instanceof Player){
+          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
+     }else{
+          if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)) { // Check if argument 0 is an integer and is more than 0.
+                $args[0] = 4; // Defining $args[0] with value 4
+          }
+          $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
+          $sender->sendMessage("You have just recieved $args[0] steak!");
+     }
+}
+return true;</code></pre> 
+    And that's it ! You made your first command with arguments !
 <br><button onclick="location.hash='Vol3'">Next Lesson <img style="position: absolute" src="images/next.png"></img></button>
 </span>
