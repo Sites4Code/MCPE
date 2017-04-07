@@ -85,7 +85,7 @@ return true;</code></pre>
           $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
      }else{
           $sender->getInventory()->addItem(Item::get(364,0,$args[0])); // We choose the first argument as the count !
-          $sender->sendMessage("You have just recieved $args[0] steak!");
+          $sender->sendMessage("You have just recieved". count($args[0]) . " steak!");
      }
 }
 return true;</code></pre> 
@@ -103,7 +103,7 @@ return true;</code></pre>
                 $args[0] = 4; // Defining $args[0] with value 4
           }
           $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
-          $sender->sendMessage("You have just recieved $args[0] steak!");
+          $sender->sendMessage("You have just recieved" .count($args[0]). " steak!");
      }
 }
 return true;</code></pre> 
@@ -119,7 +119,7 @@ return true;</code></pre>
                 $args[0] = 4; // Defining $args[0] with value 4
           }
           $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
-          $sender->sendMessage("You have just recieved $args[0] steak!");
+          $sender->sendMessage("You have just recieved" .count($args[0]). " steak!");
      }
 }
 return true;</code></pre> 
