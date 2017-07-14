@@ -60,6 +60,26 @@ By (c) Ad5001 2016
                 c: "20 ticks = 20 seconds",
                 valid: "2"
             },
+            {
+                question: "Which method is used to detect a positive number?",
+                a: "is_number",
+                b: "is_int",
+                c: "is_float",
+                valid: "2"
+            },
+            {
+                question: "Which class should be extended to make a task?",
+                a: "pocketmine\plugin\PluginTask",
+                b: "pocketmine\scheduler\Task",
+                c: "pocketmine\scheduler\PluginTask"
+            },
+                 {
+                     question: "(For more advenced users) How do we call this kind of PHP methods",
+                     a: "OOP (Oriented Object Programming)",
+                     b: "OPP (Object Programming Possibility)",
+                     c: "OOP (Object Oriented Programming",
+                     valid: 3
+                 }
         ]
 
         quizStep = -1;
