@@ -69,9 +69,10 @@ By (c) Ad5001 2016
             },
             {
                 question: "Which class should be extended to make a task?",
-                a: "pocketmine\plugin\PluginTask",
-                b: "pocketmine\scheduler\Task",
-                c: "pocketmine\scheduler\PluginTask"
+                a: "pocketmine\\plugin\\PluginTask",
+                b: "pocketmine\\scheduler\\Task",
+                c: "pocketmine\\scheduler\\PluginTask",
+                valid: "3"
             },
                  {
                      question: "(For more advenced users) How do we call this kind of PHP methods",
