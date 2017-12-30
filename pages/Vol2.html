@@ -54,7 +54,7 @@ class Inactive-to-ReactiveExample extends PluginBase implements Listener{
 
 <blockquote>This is how you can make the command "/test" a LOT better! Now, when the player issues a command, he/she will recieve 4 steak!</blockquote>
 <pre><code>if($cmd->getName() == "test"){
-     $sender->getInventory()->addItem(Item::get(364,0,2)); //364 = Item ID Value (in this case, 364 is steak)
+     $sender->getInventory()->addItem(Item::get(364,0,4)); //364 = Item ID Value (in this case, 364 is steak)
      $sender->sendMessage(TextFormat::BOLD."You have just recieved 4 steak!");
 }
 return true;</code></pre> This command lets you get four steaks! This shows you almost how powerful commands can be, but there is a LOT more! Unfortunately, something is not right! What would happen if the CONSOLE was the command sender? How do we prevent
