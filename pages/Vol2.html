@@ -14,7 +14,7 @@ use pocketmine\command\Command;
 // Person who does command
 use pocketmine\command\CommandSender;</code></pre>
 <blockquote>To setup the command we use a public function! Layout:</blockquote>
-<pre><code>public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
+<pre><code>public function onCommand(CommandSender $sender,Command $cmd,string $label,array $args) : bool{
 }</code></pre> It may be long for a function, but thats how you're gonna make commands!
 <blockquote>After Public Function onCommand():</blockquote>
 
