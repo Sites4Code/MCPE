@@ -49,7 +49,7 @@ By (c) Ad5001 2016
             {
                 question: "How to save the plugin config?",
                 a: "$this->getConfig()->reload();",
-                b: "$this->saveConifg();",
+                b: "$this->saveConfig();",
                 c: "$this->getConfig()->save();",
                 valid: "3"
             },
